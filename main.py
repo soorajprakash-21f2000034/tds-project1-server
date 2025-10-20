@@ -18,7 +18,7 @@ app = FastAPI(
 # --- Environment Variables ---
 SECRET = os.getenv("SECRET")
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
-GITHUB_USER = os.getenv("GITHUB_USER")
+GITHUB_USER = "soorajprakash-21f2000034"  # Hardcoded for safety
 
 if not all([SECRET, GITHUB_TOKEN, GITHUB_USER]):
     raise ValueError("Missing SECRET, GITHUB_TOKEN, or GITHUB_USER in .env")
@@ -70,7 +70,7 @@ class EvaluationResponse(BaseModel):
 
 # --- Helper: Generate HTML (Replace with LLM later) ---
 def generate_html_with_gemini(brief: str, attachments: List[Dict[str, Any]], existing_code: str = None) -> str:
-    prompt_context = f"Existing code:\n{existing_code}" if existing_code else "No existing code."
+    # TODO: Replace with real LLM call when ready
     return f"""<!DOCTYPE html>
 <html>
 <head><title>TDS App</title></head>
