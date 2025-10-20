@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: tds-project1
+    env: python
+    region: coimbatore # or nearest to you
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: SECRET
+        sync: false
+      - key: GITHUB_TOKEN
+        sync: false
+      - key: GITHUB_USER
+        sync: false

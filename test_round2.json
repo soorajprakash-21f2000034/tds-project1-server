@@ -1,0 +1,11 @@
+{
+  "email": "21f2000034@ds.study.iitm.ac.in",
+  "secret": "imfromthepalebluedot",
+  "task": "hello-test-12345",
+  "round": 2,
+  "nonce": "ab12xyz9",
+  "brief": "Add a blue button that says 'Round 2'",
+  "checks": ["Button exists"],
+  "attachments": [],
+  "evaluation_url": "https://httpbin.org/post"
+}
